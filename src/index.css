@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0a0e1a;
+  --fg: #fafafa;
+  --accent-cyan: #22d3ee;
+  --accent-purple: #a855f7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(34, 211, 238, 0.08), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 30%, rgba(168, 85, 247, 0.06), transparent 60%),
+    #0a0e1a;
+  background-attachment: fixed;
+  color: var(--fg);
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+/* Subtle dot grid overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #22d3ee 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Glowing avatar ring */
+.avatar-glow {
+  box-shadow:
+    0 0 0 2px rgba(34, 211, 238, 0.4),
+    0 0 20px rgba(34, 211, 238, 0.3),
+    0 0 40px rgba(168, 85, 247, 0.2);
+}
+
+/* Pulsing avatar — slowly breathes */
+.avatar-pulse {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow:
+      0 0 0 2px rgba(34, 211, 238, 0.4),
+      0 0 20px rgba(34, 211, 238, 0.3),
+      0 0 40px rgba(168, 85, 247, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 0 2px rgba(34, 211, 238, 0.6),
+      0 0 30px rgba(34, 211, 238, 0.5),
+      0 0 60px rgba(168, 85, 247, 0.4);
+  }
+}
+
+/* Glassmorphism panel */
+.glass-panel {
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.04), rgba(168, 85, 247, 0.04));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(34, 211, 238, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft glow border on glass panels */
+.glass-panel::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.3), transparent 50%, rgba(168, 85, 247, 0.3));
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* Blinking caret (typing-style) */
+.caret {
+  display: inline-block;
+  width: 3px;
+  background: linear-gradient(135deg, #22d3ee, #a855f7);
+  animation: blink 1s step-end infinite;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Stat card hover lift */
+.stat-card {
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(34, 211, 238, 0.5);
+}
+
+/* Subtle floating orbs in background */
+.orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.orb-1 {
+  width: 300px;
+  height: 300px;
+  background: #22d3ee;
+  top: 20%;
+  left: -100px;
+  animation: float 20s ease-in-out infinite;
+}
+
+.orb-2 {
+  width: 400px;
+  height: 400px;
+  background: #a855f7;
+  top: 60%;
+  right: -150px;
+  animation: float 25s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-30px) translateX(20px); }
+}
+
+/* Make typewriter cursor match gradient theme */
+.gradient-text .Typewriter__cursor,
+.gradient-text [class*='cursor'] {
+  color: #22d3ee;
+  -webkit-text-fill-color: #22d3ee;
+}
+
+/* Stat card — extra glow on hover */
+.stat-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(34, 211, 238, 0.5);
+  box-shadow:
+    0 10px 30px -10px rgba(34, 211, 238, 0.2),
+    0 0 20px -5px rgba(168, 85, 247, 0.15);
+}
