@@ -15,7 +15,7 @@ export default function Contact() {
           <a href="mailto:hrishi.more.123@gmail.com" className="px-4 py-2 bg-white text-black rounded-full text-sm font-medium hover:bg-neutral-200 transition">
             Email me
           </a>
-          <a href="https://www.linkedin.com/in/hrishikeshmore" target="_blank" rel="noopener noreferrer" className="px-4 py-2 border border-neutral-700 rounded-full text-sm font-medium hover:bg-neutral-900 hover:border-cyan-500/50 transition">
+          <a href="https://www.linkedin.com/in/hrishikesh-more" target="_blank" rel="noopener noreferrer" className="px-4 py-2 border border-neutral-700 rounded-full text-sm font-medium hover:bg-neutral-900 hover:border-cyan-500/50 transition">
             LinkedIn
           </a>
         </div>
