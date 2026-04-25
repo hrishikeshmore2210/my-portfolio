@@ -1,73 +1,90 @@
-# React + TypeScript + Vite
+# Hrishikesh More — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> AI Engineer · MSc in Artificial Intelligence · Dublin, Ireland
 
-Currently, two official plugins are available:
+🌐 **Live site:** [hrishikesh-more.vercel.app](https://hrishikesh-more.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A personal portfolio built to showcase my work in AI engineering, generative AI, and agentic systems. Designed and built from scratch — no templates, no page builders.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- ⚡ **Single-page scrolling design** — clean, focused, recruiter-friendly
+- 🎨 **Animated hero** with cycling job titles via typewriter effect
+- 💎 **Glassmorphism panels** with gradient accents
+- 📊 **Animated stat cards** that count up on scroll
+- 🌌 **Floating background orbs** + subtle dot grid for depth
+- 📱 **Fully responsive** across desktop, tablet, and mobile
+- 🚀 **Continuous deployment** via Vercel
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-06B6D4?logo=tailwindcss&logoColor=white)
+![Motion](https://img.shields.io/badge/Motion-12-FF0066)
+![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?logo=vercel&logoColor=white)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Layer | Tooling |
+|-------|---------|
+| **Framework** | React 19 + TypeScript |
+| **Build** | Vite |
+| **Styling** | Tailwind CSS v4 |
+| **Animations** | Motion (formerly Framer Motion) |
+| **Typewriter** | react-simple-typewriter |
+| **Hosting** | Vercel (with auto-deploy from main) |
+
+---
+
+## 🚀 Run locally
+
+```bash
+# Clone the repo
+git clone https://github.com/hrishikeshmore2210/my-portfolio.git
+cd my-portfolio
+
+# Install dependencies
+npm install
+
+# Start the dev server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📁 Project structure
+
+my-portfolio/
+├── public/                  # Static assets (avatar, favicon)
+├── src/
+│   ├── components/          # Section components
+│   │   ├── Hero.tsx
+│   │   ├── About.tsx
+│   │   ├── Experience.tsx
+│   │   ├── Projects.tsx
+│   │   ├── Education.tsx
+│   │   ├── Certifications.tsx
+│   │   ├── Skills.tsx
+│   │   ├── Contact.tsx
+│   │   ├── Footer.tsx
+│   │   └── AnimatedSection.tsx
+│   ├── App.tsx              # Main page composition
+│   ├── main.tsx             # React entry point
+│   └── index.css            # Global styles + Tailwind
+├── index.html               # HTML shell + SEO metadata
+└── package.json
+
+
+## 📬 Contact
+
+- **Email:** [hrishi.more.123@gmail.com](mailto:hrishi.more.123@gmail.com)
+- **LinkedIn:** [linkedin.com/in/hrishikeshmore](https://www.linkedin.com/in/hrishikeshmore)
+
+
+Built with ❤️ in Dublin · © 2026 Hrishikesh More
